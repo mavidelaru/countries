@@ -1,0 +1,36 @@
+<h2>Paises por Región</h2><br>
+
+<p>Seleccione una Región</p>
+
+
+<select [(ngModel)]="selectedRegion" (change)='getPaises()'>
+    <option *ngFor="let region of regiones" [ngValue]="region.valor">{{region.nombre}}</option>
+</select>
+
+<hr>
+
+<div *ngIf="paises.length > 0">
+
+    <p>Paises de la Región de {{selectedRegion}}</p>
+
+    <p-table [value]="paises">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Población</th>
+                <th>Capital</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-pais>
+            <tr>
+                <td>{{pais.alpha2Code}}</td>
+                <td>{{pais.name}}</td>
+                <td>{{pais.population}}</td>
+                <td>{{pais.capital}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+
+</div>
+

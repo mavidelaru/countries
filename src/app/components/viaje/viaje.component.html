@@ -1,0 +1,12 @@
+<h2>Prueba de viajar</h2>{{visitados.length}}
+<div *ngIf="estancia">
+    <p>{{estancia.name}}</p>
+    <button [disabled]="!jugable" (click)="viajar(frontera)" *ngFor="let frontera of estancia.borders">{{frontera}}</button>
+
+</div>
+
+<br>
+
+<div>
+    <button (click)="reset()">RESET</button>
+</div>
