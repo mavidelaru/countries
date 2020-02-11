@@ -15,6 +15,7 @@ import {MultiSelectModule} from 'primeng/multiselect';
 import {TableModule} from 'primeng/table';
 import { ViajeComponent } from './components/viaje/viaje.component';
 import {ButtonModule} from 'primeng/button';
+import {DropdownModule} from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {ButtonModule} from 'primeng/button';
     BrowserAnimationsModule,
     TableModule,
     MultiSelectModule,
+    DropdownModule,
     ButtonModule
   ],
   providers: [PaisService],

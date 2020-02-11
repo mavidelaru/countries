@@ -4,5 +4,5 @@ export class Pais{
     population:number;
     capital:string;
     border:string[];
-
+    flag?: string;
 }
